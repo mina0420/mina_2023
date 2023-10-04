@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>취업 정보 계정 만들기</title>
+</head>
+<body>
+<h3>취업 정보 계정 만들기</h3>
+* 필수 입력 항목
+기본 정보
+<form name="usr_info" method="post" action="{%url'register.html'%}">
+    <label>이 름* <input type="text" name="name" id="name" size="8"></label> <br>
+    <label for="email">이메일* </label>
+    <input type="email" name="email" id="email" size='15' placeholder="id@domain_name"><br>
+    <label for="pwd">암호*</label>
+    <input type="password" name="pwd" id="pwd" size="12"><br>
+    <label for="pwd">암호 확인*</label>
+    <input type="password" name="pwdcheck" id="pwdcheck" size="12"><br>
+    <label for="phone">모바일 폰*</label>
+    <input type="tel" name="phone" id="phone" placeholder="010-0000-0000"><br>
+    <label>개인 홈페이지 <input type="url" name="homepg" id="homepg" placeholder="http://"></label><br>
+
+    <p><label>졸업 여부*
+        <select name="graduate" id="grad">
+            <option value="0">---선택---</option>
+            <option value="1">졸업예정</option>
+            <option value="2">졸업</option>
+    </select> </label></p>
+
+
+
+    <textarea id="commets" name="comments" cols="80" rows="10">
+        이전 업체에서 담당한 업무를 기술하시오.
+    </textarea>
+
+
+</form>
+
+
+
+
+
+    <input type="submit" value="파일 선택">
+    <input type="submit" value="제 출">
+    <input type="submit" value="재작성">
+</form>
+</body>
+</html>
