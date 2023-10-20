@@ -3,12 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <title>취업 정보 계정 만들기</title>
+    <style>
+        .title {
+            font-weight: bold;
+            background-color: lightblue;
+            width: 800px;
+            padding-left: 10px;
+            }
+        div {
+            display: inline-block;
+            margin-left: 8px;
+            text-align: right;
+            width: 130px;
+            padding-right: 8px;
+        }
+    </style>
 </head>
 <body>
 <h3>취업 정보 계정 만들기</h3>
-<p>* 필수 입력 항목</p>
+<p style="color:red; font-size: 10pt;">* 필수 입력 항목</p>
 <form name="usr_info" method="post" action="{%url'register.html'%}">
-    <p>기본 정보</p>
+    <p class="title">기본 정보</p>
     <label>이 름* <input type="text" name="name" id="name" size="8"></label> <br>
     <label for="email">이메일* </label>
     <input type="email" name="email" id="email" size='15' placeholder="id@domain_name"><br>
@@ -20,7 +35,7 @@
     <input type="tel" name="phone" id="phone" size="13" placeholder="010-0000-0000"><br>
     <label>개인 홈페이지 <input type="url" name="homepg" id="homepg" size="30" placeholder="http://"></label><br>
     <label>주소* <input type="text" name="address" id="address" size="30"></label> <br>
-    <p>학 력</p>
+    <p class="title">학 력</p>
     <label>학교 명* <input type="text" name="schoolname" id="schoolname" size="12"></label> <br>
     <label>전 공* <input type="text" name="major" id="major" size="12"></label> <br>
     <label>졸업 여부*
@@ -30,13 +45,12 @@
             <option value="2">졸업</option>
         </select> </label> <br>
     <label>졸업(예정)일 <input type="date"></label>
-    <p>업무 경력</p>
+    <p class="title">업무 경력</p>
     <label>근무업체명 <input type="text" name="company" id="company" size="20"></label> <br>
     <label>직 위 <input type="text" name="position" id="position" size="10"></label> <br>
-    <label>담당 업무
-        <textarea id="commets" name="comments" cols="80" rows="10">이전 업체에서 담당한 업무를 기술하시오.</textarea></label> <br>
+    <label>담당 업무<textarea id="commets" name="comments" cols="80" rows="10">이전 업체에서 담당한 업무를 기술하시오.</textarea></label> <br>
     <label>근무년수 <input type="number" min="0" max="10" step="0.5" >년</label> <br>
-    <p>자기소개서</p>
+    <p class="title">자기소개서</p>
     <p><label>첨부 파일 <input type="file" value="파일 선택"></label></p>
     <input type="submit" value="제출">
     <input type="reset" value="재작성">
